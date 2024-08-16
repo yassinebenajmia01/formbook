@@ -9,6 +9,7 @@ import PopularCat from './components/categorie';
 import TopStory from './components/story';
 import Trending from './components/trending';
 import Order from './components/order';
+import Product from './components/product';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <TopStory/>
       <Trending/>
       <Order/>
+      <Product/>
       
     </div>
   );
