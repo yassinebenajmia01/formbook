@@ -1,6 +1,5 @@
 import { useEffect, useContext } from 'react';
-import BookCreate from './components/BookCreate';
-import BookList from './components/BookList';
+
 import BooksContext from './context/books';
 import Header from './components/header';
 import Navbar from './components/navbar';
@@ -9,7 +8,9 @@ import PopularCat from './components/categorie';
 import TopStory from './components/story';
 import Trending from './components/trending';
 import Order from './components/order';
-import Product from './components/product';
+import ListProduct from './pages/listproduct';
+import BestSeller from './components/bseller';
+import Popular from './components/popular';
 
 
 function App() {
@@ -26,9 +27,12 @@ function App() {
       <Choice/>
       <PopularCat/>
       <TopStory/>
+      <ListProduct/>
+
       <Trending/>
       <Order/>
-      <Product/>
+      <BestSeller/>
+      <Popular/>
       
     </div>
   );

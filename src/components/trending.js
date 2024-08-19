@@ -9,7 +9,7 @@ export default function Trending() {
   ];
 
   return (
-    <div className="p-6 mt-80">
+    <div className="p-6 mt-[-3%]">
       <h2 className="text-3xl font-bold mb-4 text-black">Trending Search</h2>
       <div className="flex flex-wrap gap-2 mt-5">
         {trendingItems.map((item, index) => (
