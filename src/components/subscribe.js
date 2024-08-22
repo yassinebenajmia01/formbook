@@ -2,18 +2,25 @@ import React from 'react';
 
 function Subscribe() {
   return (
-    <div className="bg-purple-950 text-white py-6 flex justify-center items-center">
+    <div
+      className="bg-[#4B3EC4] text-white py-6 flex justify-center items-center bg-cover bg-no-repeat"
+      style={{
+        backgroundImage: "url('https://s3-alpha-sig.figma.com/img/b7b3/0117/6effb21b1deeaefaa655206e786c5b6d?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nUxIQEuoXdxUVW4AJXApW9uik0t1RGDYhlxVRgY-xXgnANUiZMe4grFLOJMqv7tyWEbSaVKqE0AjS8otvkZOzTFKwjJa~9ogesq59O21mE4AAM2XZ7XwrWcj-hpsI4UC17cA56kZ2Xo1yLIjY4IxjyMjj4X8ZPAV7qAS~95B72ZbyFJn5LRFx9b0CGwwHr5l0yXsTp5LAUqu3Udq1PQu4M3FuhlfOMuk229Dz69cU4lBQx0ozStK32x2c6lnZ6Jc3Nv1fW7uEYr0wxJQek8DpBHzd30fZuNj7WtpPA4gMokp4lJCjlaj5aH4kfRM9abzoZ29YcE~Q2QHxep9hAFNWg__')",
+        backgroundPosition: ' center',
+        backgroundSize: 'contain',
+      }}
+    >
       <div className="flex flex-col md:flex-row items-center md:space-x-4">
         <p className="text-lg md:text-2xl font-semibold mr-72">
-          <span className="font-bold ">Subscribe</span> & Get 
-          <span className="text-blue-400 "> 10% OFF </span> 
+          <span className="font-bold">Subscribe</span> & Get
+          <span className="text-blue-400"> 10% OFF </span>
           for first order
         </p>
-        <form className="flex items-center mt-4 md:mt-0 ">
-          <div className="relative">
+        <form className="flex items-center mt-4 md:mt-0 relative">
+          <div className="relative w-full">
             <input
               type="email"
-              className="p-3 px-6 pl-12 rounded-full text-black focus:outline-none"
+              className="p-3 px-6 pl-12 pr-28 rounded-full text-black focus:outline-none w-[150%]"
               placeholder="Enter your email address"
             />
             <span className="absolute left-3 top-3">
@@ -32,13 +39,13 @@ function Subscribe() {
                 />
               </svg>
             </span>
+            <button
+              type="submit"
+              className="bg-black text-white py-2 px-4 rounded-full hover:bg-gray-800 absolute left-[107%] top-1/2 transform -translate-y-1/2"
+            >
+              SUBSCRIBE
+            </button>
           </div>
-          <button
-            type="submit"
-            className="bg-black text-white py-3 px-6 rounded-full  hover:bg-gray-800 absolute  right-56"
-          >
-            SUBSCRIBE
-          </button>
         </form>
       </div>
     </div>
