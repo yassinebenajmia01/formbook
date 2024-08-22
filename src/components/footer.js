@@ -125,8 +125,8 @@ function Footer() {
               <img src="https://s3-alpha-sig.figma.com/img/647c/cd9e/ac28cd11f9fb6cd49c52dea670811cb9?Expires=1725235200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BRnouPhAlvgChg8b9HxDiNGSi0cqeJJFEvElvAQZSY4e571TthkxTnxU4Fcf5gbPHni3gT4pEgrT96cg8NX4S9C5M3P7SVYEUO498woGpIpkw9XYB5FNKyiLMpBn0ANOTeiB3QwioUG3uTN6IZsLML5q5eHy~s~oimKuUp-q2dHCUo40Cm72e7OZPNwI9BSv2g~DSwPtV0flWTQg2HHV7DFaOucEie-OEXQJVmbettMI2GdU~qCQeyMhWNyM3YqUoyZr1GYGNLgNotq-8ngfniHXjUzJvdZTlWmACNrHMuvUw8icGgDnFA7z-kX2aphpRc3mWE4sZImhjvgOq3SXxg__" alt="Klarna" className="w-12 h-auto"/>
             </div>
             <div className="flex space-x-4 mr-24">
-                <div className="mr-0 md:ml-4 mt-2 md:mt-0">
-                  <select className="border border-gray-300 p-1 rounded text-sm">
+                <div className="mr-0 md:ml-4 mt-2 md:mt-0"> 
+                   <select className="border border-gray-300 p-1 rounded text-sm">
                     <option>USD</option>
                   </select>
                 </div>

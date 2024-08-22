@@ -122,7 +122,7 @@ function SignUp() {
             </div>
           </form>
           <p className="text-gray-600 text-sm mt-4">
-            ALREADY USER? <a  className="text-green-500 hover:text-green-800">LOGIN</a>
+            ALREADY USER? <p  className="text-green-500 hover:text-green-800">LOGIN</p>
           </p>
         </div>
       </div>
