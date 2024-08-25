@@ -1,17 +1,18 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { addBooks, addCategories, addNotification, categoryId, getBooksByCategories, getcategories, getNotification } from "../api/api";
+import { addBooks, addCategories, addNotification, categoryId, getBooksByCategories, getcategories, getNews, getNotification } from "../api/api";
 
 const apiContext = createContext()
 export const ApiProvider = ({ children }) => {
 
-        const [response,setresponse]=useState([])
+        const [category,setCategory]=useState([])
+
         useEffect(()=>{
             const getcat=async()=>{
                 try{
               const reponse=await getcategories()
-               await setresponse(reponse)
+               await setCategory(reponse)
               
-              return reponse
+              return category
             }
             catch{
                 console.log('Apierreur::',console.error())
@@ -28,7 +29,7 @@ export const ApiProvider = ({ children }) => {
               const addCat=async(data)=>{
                   try{
                 const reponse=await addCategories(data)
-                 await setresponse(reponse)
+                
                 
                 return reponse
               }
@@ -41,7 +42,6 @@ export const ApiProvider = ({ children }) => {
           const addBookss=async(data)=>{
             try{
           const reponse=await addBooks(data)
-           await setresponse(reponse)
           
           return reponse
         }
@@ -50,25 +50,28 @@ export const ApiProvider = ({ children }) => {
         }
     
     };
+    const [notificationn,setNotificationn]=useState([])
+
     const adddNotification=async(data)=>{
       try{
-    const reponse=await addNotification(data)
-     await setresponse(reponse)
+    const reponse=await adddNotification(data)
+     await setNotificationn(reponse)
     
-    return reponse
+    return notificationn
   }
   catch{
       console.log('Apierreur::',console.error())
   }
 
 };
+const [id,setCategorybyId]=useState([])
 
 const categoryIdd=async(data)=>{
   try{
 const reponse=await categoryId(data)
- await setresponse(reponse)
+ await setCategorybyId(reponse)
 
-return reponse
+return id
 }
 catch{
   console.log('Apierreur::',console.error())
@@ -76,12 +79,12 @@ catch{
 
 };
 
-const [notification,setnotification]=useState([])
+const [notification,setNotification]=useState([])
         useEffect(()=>{
             const getNotifica=async()=>{
                 try{
               const reponse=await getNotification()
-               await setnotification(reponse)
+               await setNotification(reponse)
               
               return notification
             }
@@ -111,12 +114,31 @@ const [notification,setnotification]=useState([])
         getcat()
     }
         ,[])
+        const [news,setNews]=useState([])
+
+        useEffect(()=>{
+            const getnew=async()=>{
+                try{
+              const reponse=await getNews()
+               await setNews(reponse)
+              
+              return news
+            }
+            catch{
+                console.log('Apierreur::',console.error())
+            }
+        
+        };
+        getnew()
+    }
+        ,[])
+   
             
   
  
         
 return(
-<apiContext.Provider value={{response,addCat,addBookss,adddNotification,categoryIdd,notification,booksByCategories}}>
+<apiContext.Provider value={{category,addCat,addBookss,adddNotification,id,notification,booksByCategories,news}}>
         {children}
 </apiContext.Provider>)
 }

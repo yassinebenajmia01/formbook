@@ -92,3 +92,16 @@ export const getBooksByCategories=async(categoryId)=>{
             console.error("erreur")
       }
     }
+    export const  getNews=async()=> {
+
+        try{
+        const reponse=await axios.get(`https://ordersbacend.onrender.com/v1/Book/new-books`)
+        console.log("first",reponse)
+        return reponse.data}
+        catch{
+            console.log('Apierreur',console.error())
+        }
+    
+    
+    
+    }
