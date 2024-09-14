@@ -10,6 +10,7 @@ export const ApiProvider = ({ children }) => {
             const getcat=async()=>{
                 try{
               const reponse=await getcategories()
+              console.log("response",reponse)
                await setCategory(reponse)
               
               return category
@@ -120,7 +121,8 @@ const [notification,setNotification]=useState([])
             const getnew=async()=>{
                 try{
               const reponse=await getNews()
-               await setNews(reponse)
+              console.log("bbbbb",reponse.books)
+               await setNews(reponse.books)
               
               return news
             }

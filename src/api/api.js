@@ -4,8 +4,8 @@ const BASE_URL = "http://localhost:8000/v1";
 export const  getcategories=async()=> {
 
     try{
-    const reponse=await axios.get(`${BASE_URL}/Category/categories`)
-    console.log("first",reponse)
+    const reponse=await axios.get(`${BASE_URL}/Categorie/get`)
+    console.log("first cat",reponse)
     return reponse.data}
     catch{
         console.log('Apierreur',console.error())
@@ -95,7 +95,7 @@ export const getBooksByCategories=async(categoryId)=>{
     export const  getNews=async()=> {
 
         try{
-        const reponse=await axios.get(`https://ordersbacend.onrender.com/v1/Book/new-books`)
+        const reponse=await axios.get(`${BASE_URL}/books/books`)
         console.log("first",reponse)
         return reponse.data}
         catch{

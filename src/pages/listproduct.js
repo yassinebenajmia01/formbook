@@ -4,6 +4,7 @@ import { useApi } from '../context/apiContext';
 
 function ListProduct() {
   const {news}=useApi()
+  console.log("aaaaaa",news)
   return (
     <>
       <div className='bg-[#EBEEF6] ml-[5%] mr-[2%]  mb-[2%] md:ml-[5%] mt-[21%]'>
@@ -11,14 +12,17 @@ function ListProduct() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {news.length !== 0 ? (
-            news.map((product) => (
-              <Product
-                key={product.id}
-                title={product.bookName}
-                price={product.price}
-                coverImg={product.coverImg}
-              />
-            ))
+        news.map((product) => (
+          <Product
+            key={product._id}
+            title={product.bookName}
+            price={product.price}
+            coverImg={product.coverImg}
+            ageRestriction={product.ageRestriction}
+            description={product.description}
+          />
+        ))
+        
           ) : (
             <div>Error: No products available</div>
           )}

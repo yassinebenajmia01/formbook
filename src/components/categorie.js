@@ -6,7 +6,7 @@ function PopularCat() {
 
   // },[category])
 
-
+console.log("ttttt",category)
 
   return (
     <div className="mx-8 my-4 ml-[15%] md:ml-[5%] mt-6">
@@ -17,14 +17,22 @@ function PopularCat() {
         </a>
       </div>
       <div className="flex overflow-x-hidden mt-4 space-x-4 ml-[0.5%] justify-around">
-        {category.map((category, index) => (
-          <div key={index} className="flex flex-col items-center justify-around">
-            <img src={category.image} alt={category.name} className="w-[110px] h-[110px] object-cover rounded-full" />
-            <button className="text-sm font-bold mt-2 text-center">
-              {category.name}
-            </button>
-          </div>
-        ))}
+      {category.map((cat, index) => (
+  <div key={index} className="flex flex-col items-center justify-around">
+    <img 
+      src={cat.image} 
+      alt={cat.name} 
+      className="w-[110px] h-[110px] object-cover rounded-full" 
+    />
+    <button className="text-sm font-bold mt-2 text-center">
+      {cat.name}
+    </button>
+    <p className="text-xs text-gray-500 mt-1">
+      {cat.numberOfBooks} books
+    </p>
+  </div>
+))}
+
       </div>
     </div>
   );
