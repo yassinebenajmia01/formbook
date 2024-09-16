@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from "react";
 import Loginn from "../pages/login";
-
+import axios from  "axios"
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (name, email, password) => {
     try {
-      const response = await signup(name, email, password);
+      const response = await  axios.post("http://localhost:8000/v1/")
       const [firstName, lastName] = name.split(' ');
       setUser({ firstName, lastName, email });
       return response;
