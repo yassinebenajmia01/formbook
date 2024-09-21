@@ -32,9 +32,10 @@ function App() {
 
   return (
     <>
-    <Header />
-      <Navbar />
+    
       <BrowserRouter>
+      <Header />
+      <Navbar />
         <Routes>
           <Route index element={<> <Choice /><PopularCat /><TopStory /><ListProduct /><Order /><Trending /><BestSeller /><Popular /><Suggest/><Amazon/><Landing/><Final/></>} />
           <Route path="/login" element={<Login />} />
